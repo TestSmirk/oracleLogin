@@ -18,5 +18,6 @@ const Password = "";
     await page.type("#password",Password);
     // await page.click(inputTypeSubmit);
     await page.click("body > div.main-container > div.right-panel > table > tbody > tr:nth-child(3) > td:nth-child(3) > form > div:nth-child(14) > input[type=submit]");
+    await page.close()
 
 })();
