@@ -13,4 +13,4 @@ const Password = "";
 ```
 * `node oracle.js` 运行
 
-* crontab -e  add 每周执行 `0 0 * * 0 /path/to/node /path/to/oracle.js`
+* crontab -e  add 每周执行 `0 0 * * 0 /path/to/node /path/to/oracle.js` 由于要多次启动和关闭Chromium可能会有僵尸进程占用cpu内存需要定时清理 `*/10 * * * * /usr/bin/killall -9 chrome`
