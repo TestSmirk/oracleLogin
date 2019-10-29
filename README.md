@@ -9,6 +9,7 @@ oracle 自动登陆
 * `npm install` or `yarn add` 要下载 Chromium带宽不高到国内机器可能会慢
 * 修改 登陆连接 tenant 和用户名 密码 
 ```
+const loginUrl = "";
 const Tenant = ""; 
 const UserName = "";
 const Password = "";
