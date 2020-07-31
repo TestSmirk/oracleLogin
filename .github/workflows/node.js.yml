@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: echo Hello world LOGIN_URL $LOGIN_URL !
       - run: node oracle.js
+      - run: echo Hello world LOGIN_URL $LOGIN_URL !
         env:
           CI: true
           LOGIN_URL: ${{ secrets.LOGIN_URL }}
