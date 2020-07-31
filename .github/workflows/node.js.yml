@@ -20,8 +20,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: node oracle.js
       - run: echo Hello world LOGIN_URL $LOGIN_URL !
+      - run: node oracle.js
         env:
           CI: true
           LOGIN_URL: ${{ secrets.LOGIN_URL }}
+          Tenant: ${{ secrets.TENANT }}
+          USER_NAME: ${{ secrets.USER_NAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}

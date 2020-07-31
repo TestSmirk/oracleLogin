@@ -1,12 +1,11 @@
 const puppeteer = require('puppeteer');
 
 const loginUrl = process.env.LOGIN_URL;
-const Tenant = "";
-const UserName = "";
-const Password = "";
+const Tenant = process.env.TENANT;
+const UserName = process.env.USER_NAME;
+const Password = process.env.PASSWORD;
 
 (async () => {
-    console.log("process.env",process.env.LOGIN_URL)
     if (Tenant === "" || UserName === "" || Password === "" || loginUrl === "") {
         console.log("请输入");
         process.exit(0);
