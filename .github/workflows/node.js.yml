@@ -25,6 +25,6 @@ jobs:
         env:
           CI: true
           LOGIN_URL: ${{ secrets.LOGIN_URL }}
-          Tenant: ${{ secrets.TENANT }}
+          TENANT: ${{ secrets.TENANT }}
           USER_NAME: ${{ secrets.USER_NAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
