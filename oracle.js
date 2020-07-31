@@ -1,11 +1,12 @@
 const puppeteer = require('puppeteer');
 
-const loginUrl = "https://console.us-ashburn-1.oraclecloud.com/";
+const loginUrl = process.env.LOGIN_URL;
 const Tenant = "";
 const UserName = "";
 const Password = "";
 
 (async () => {
+    console.log("process.env",process.env.LOGIN_URL)
     if (Tenant === "" || UserName === "" || Password === "" || loginUrl === "") {
         console.log("请输入");
         process.exit(0);
