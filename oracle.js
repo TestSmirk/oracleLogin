@@ -9,9 +9,9 @@ const Password = process.env.PASSWORD;
     console.log("Tenant", Tenant.length)
     console.log("UserName", UserName.length)
     console.log("Password", Password.length)
-    if (Tenant === "" || UserName === "" || Password === "" || loginUrl === "") {
+    if (Tenant === "" || UserName === "" || Password === "" ) {
         console.log("请输入");
-        process.exit(0);
+        process.exit(1);
         return
     }
     const browser = await puppeteer.launch({headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox']});
