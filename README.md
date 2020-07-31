@@ -13,5 +13,5 @@ fork过去就行了吧??
 只要添加这三个字段 `PASSWORD`   `TENANT`  `USER_NAME`
 
 添加完如图:  
-![](https://github.com/TestSmirk/oracleLogin/blob/master/imgs/[Z{{MF511]MWVMDYR2QY{OA.png)
+![](https://github.com/TestSmirk/oracleLogin/blob/master/imgs/passwd.png)
 
