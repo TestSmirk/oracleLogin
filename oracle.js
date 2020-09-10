@@ -26,13 +26,22 @@ const Password = process.env.PASSWORD;
     console.log("点击确定");
     await page.click(inputTypeSubmit);
     console.log("等待下一页加载");
-    try {
-        await page.waitFor("#idcs-signin-basic-signin-form-username", {timeout: 3000});
-    } catch (e) {
-        await sleep(10*1000)
+
+    let userNameInputed = false;
+    while (userNameInputed){
+        try {
+            await page.waitFor("#idcs-signin-basic-signin-form-username", {timeout: 3000});
+        } catch (e) {
+            await sleep(20*1000)
+        }
+        console.log("输入用户名");
+        try{
+            await page.type("#idcs-signin-basic-signin-form-username", UserName);
+            userNameInputed  = true
+        }catch (e){
+            console.log("输入用户名失败")
+        }
     }
-    console.log("输入用户名");
-    await page.type("#idcs-signin-basic-signin-form-username", UserName);
     console.log("输入密码");
     await page.type(".oj-inputpassword-input", Password);
     // await page.click(inputTypeSubmit);
